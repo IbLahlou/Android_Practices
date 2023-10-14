@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">atelier_2</string>
+    <string name="textview">TextView</string>
+    <string name="Halong">TODO</string>
+    <string name="halong_bay_vietnam">Halong Bay , Vietnam</string>
+    <string name="photo_by_intrepidtravel_com">Photo By intrepidtravel.com</string>
+</resources>
