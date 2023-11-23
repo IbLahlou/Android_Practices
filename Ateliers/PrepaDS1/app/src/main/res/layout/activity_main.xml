@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:stretchColumns="1, 4"
+    tools:context=".MainActivity">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_height="40dp"
+            android:layout_span="5"
+            android:background="#00FFFFFF"
+            android:gravity="center"
+            android:shadowColor="@color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:text="Calculer votre poids"
+            android:textColor="#000000"
+            android:textSize="32sp" />
+    </TableRow>
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/vspace1"
+            android:layout_width="400dp"
+            android:layout_height="20dp"
+            android:layout_span="4" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_span="4"
+            app:srcCompat="@drawable/img" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+
+            android:id="@+id/label1"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Taille"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/nbr1"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_span="3"
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/unit1"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-60dp"
+            android:text="cm" />
+
+    </TableRow>
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/label3"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:text="Genre"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioGroup
+                android:id="@+id/gender"
+                android:layout_width="280dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="40dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Femme" />
+
+                <Space
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Homme" />
+
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TableRow
+
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+
+        <TextView
+            android:id="@+id/label5"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:text="Resultat"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/result"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_span="3"
+            android:ems="10"
+            android:inputType="number|text" />
+
+        <TextView
+            android:id="@+id/unit3"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-60dp"
+            android:text="kg" />
+
+
+    </TableRow>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/tableRow3"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <Button
+
+            android:id="@+id/compute"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:text="Calculer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.006" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/compute"
+            app:layout_constraintStart_toEndOf="@+id/compute" />
+
+        <Button
+
+            android:id="@+id/cancel"
+
+            android:layout_width="160dp"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="2dp"
+            android:text="Annuler"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.008" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</TableLayout>
